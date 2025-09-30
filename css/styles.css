@@ -1027,7 +1027,7 @@ p {
 }
 
 .backdrop:not(.is-open) .modal {
-    transform: scale(.98);
+    transform: scale(0.98);
 }
 
 /* Close button  */
