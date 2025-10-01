@@ -408,6 +408,17 @@ p {
     
 }
 
+
+@media (min-resolution: 192dpi),
+(min-resolution: 2dppx),
+(-webkit-min-device-pixel-ratio: 2) {
+    .solutions {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, .7), rgba(46, 47, 66, .7)),
+            url("../images/solutions-bg@2x.jpg");
+    }
+}
+
 @media screen and (min-width: 768px) {
     .solutions {
         padding: 112px 0;
@@ -471,12 +482,15 @@ p {
 }
 
 .features-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 72px;
-    column-gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    /* row 72px, column 24px */
+    justify-content: center;
+    /* center rows */
+    margin: 0;
+    padding: 0;
 }
-
 
 .feature-icon-box {
     display: none;
@@ -507,10 +521,9 @@ p {
         padding: 96px 0;
     }
 
-    .features-list {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 24px;
-        row-gap: 72px;
+    .features-list>* {
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 24px);
     }
 
     .feature-title {
@@ -518,10 +531,10 @@ p {
         font-size: 36px;
         line-height: 1.2;
     }
+}
 
-    .feature-icon-box {
-        display: none;
-    }
+.feature-icon-box {
+    display: none;
 }
 
 /* desktop: four columns, show icon tiles and smaller headings */
@@ -584,17 +597,23 @@ p {
 }
 
 .team-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
     padding: 0;
     list-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
     .team-list {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 64px;
+        gap: 64px 24px;
+    flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -613,7 +632,7 @@ p {
         0 1px 1px rgba(46, 47, 66, .16),
         0 2px 1px rgba(46, 47, 66, .08);
     max-width: 100%;
-    margin: 0 auto;
+    
 }
 
 .team-info {
