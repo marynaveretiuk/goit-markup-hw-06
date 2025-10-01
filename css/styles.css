@@ -698,7 +698,9 @@ p {
 }
 
 .projects-list {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     grid-template-columns: 1fr;
     gap: 48px 24px;
 }
