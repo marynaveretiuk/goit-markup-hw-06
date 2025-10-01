@@ -284,8 +284,8 @@ p {
     flex-direction: column;
     height: 100%;
     padding: 72px 40px;
-   
-    }
+
+}
 
 .mobile-menu-close {
     position: absolute;
@@ -339,7 +339,7 @@ p {
     flex-direction: column;
     gap: 24px;
     font-style: normal;
-    
+
 }
 
 .mobile-menu address a {
@@ -395,7 +395,7 @@ p {
 .solutions {
     background-color: #2e2f42;
 
-   
+
     background-image:
         linear-gradient(rgba(46, 47, 66, .7), rgba(46, 47, 66, .7)),
         url("../images/solutions-bg.jpg");
@@ -405,7 +405,7 @@ p {
     background-size: cover;
 
     padding: 72px 0;
-    
+
 }
 
 
@@ -544,7 +544,7 @@ p {
     }
 
     .features-list {
-        grid-template-columns: repeat(4, 1fr);
+        flex-wrap:nowrap;
         column-gap: 24px;
         row-gap: 0;
     }
@@ -610,7 +610,7 @@ p {
     .team-list {
         grid-template-columns: repeat(2, 1fr);
         gap: 64px 24px;
-    flex-direction: row;
+        flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -632,7 +632,7 @@ p {
         0 1px 1px rgba(46, 47, 66, .16),
         0 2px 1px rgba(46, 47, 66, .08);
     max-width: 100%;
-    
+
 }
 
 .team-info {
@@ -904,7 +904,7 @@ p {
     padding-left: 16px;
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-        opacity: 0.3;
+    opacity: 0.3;
 }
 
 .subscribe-input::placeholder {
@@ -962,7 +962,7 @@ p {
     .subscribe-box {
         text-align: left;
         margin-left: 0;
-             max-width: 483px;
+        max-width: 483px;
     }
 
     .subscribe-form {
@@ -1017,7 +1017,7 @@ p {
     transition: opacity 250ms cubic-bezier(.4, 0, .2, 1),
         visibility 250ms cubic-bezier(.4, 0, .2, 1);
     z-index: 10000;
-    
+
 }
 
 .backdrop.is-open {
@@ -1034,7 +1034,7 @@ p {
     max-height: calc(100dvh - 32px);
     overflow: auto;
     background: #ffffff;
-    
+
     border-radius: 12px;
     box-shadow:
         0 1px 1px rgba(0, 0, 0, .14),
@@ -1044,12 +1044,14 @@ p {
     position: relative;
     transform: translateY(0);
 }
+
 @media (min-width: 768px) {
     .modal {
         /* 24px modal padding + 24px button + 12px gap */
         padding-right: calc(24px + 24px + 12px);
     }
 }
+
 .backdrop:not(.is-open) .modal {
     transform: scale(0.98);
 }
@@ -1100,7 +1102,7 @@ p {
     text-align: center;
     max-width: 360px;
     margin: 0 0 16px;
- 
+
 }
 
 .modal-form {
@@ -1188,12 +1190,10 @@ p {
     margin-bottom: 24px;
 }
 
-.checkbox-input.visually-hidden {
-   
-}
+.checkbox-input.visually-hidden {}
 
 .checkbox-label {
-    
+
     align-items: center;
     font-weight: 400;
     font-size: 12px;
