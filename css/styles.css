@@ -706,8 +706,20 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-    .projects-list {
-        grid-template-columns: repeat(2, 1fr);
+.projects-list {
+        flex-direction: row;
+   
+        flex-wrap: wrap;
+       
+        justify-content: center;
+         gap: 16px;
+    }
+
+    .projects-list .portfolio-card {
+        flex: 0 1 calc(50% - 24px);
+       
+        max-width: 360px;
+       
     }
 }
 
